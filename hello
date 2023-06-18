@@ -1,0 +1,12 @@
+simplex = Simplex(
+  SimplexRow(0, ["x", "y", "x"], [Fraction(1), Fraction(5), Fraction(3)], "=", Fraction(0, 1), 4),
+  [
+    SimplexRow(1, ["x", "y", "x"], [Fraction(1), Fraction(3), Fraction(1)], "<=", Fraction(3), 4),
+    SimplexRow(2, ["x", "y", "x"], [Fraction(-1), Fraction(0), Fraction(3)], "<=", Fraction(2), 4),
+    SimplexRow(3, ["x", "y", "x"], [Fraction(2), Fraction(4), Fraction(-1)], "<=", Fraction(4), 4),
+    SimplexRow(4, ["x", "y", "x"], [Fraction(1), Fraction(3), Fraction(-1)], "<=", Fraction(2), 4)
+  ]
+)
+
+simplex.max()
+print(simplex)
